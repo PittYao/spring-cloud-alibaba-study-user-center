@@ -20,6 +20,9 @@ spring:
         server-addr: localhost:8848
         # 集群名称
         cluster-name: CDC
+        # 元数据
+        metadata:
+          version: v2
 
 ---
 spring:
