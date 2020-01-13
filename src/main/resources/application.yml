@@ -1,6 +1,8 @@
 server:
   port: 8041
 
+nacos-server-addr: localhost:8848
+
 spring:
   application:
     name: user-center
@@ -17,12 +19,12 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
-        # ¼¯ÈºÃû³Æ
+        server-addr: ${nacos-server-addr}
+        # é›†ç¾¤åç§°
         cluster-name: CDC
-        # ÔªÊı¾İ
+        # å…ƒæ•°æ®
         metadata:
-          version: v2
+          version: v1
 
 ---
 spring:
