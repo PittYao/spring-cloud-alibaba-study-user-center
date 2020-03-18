@@ -1,4 +1,4 @@
-package com.fanyao.alibaba.usercenter.domain.entity.user;
+package com.fanyao.alibaba.usercenter.entity.po;
 
 import java.util.Date;
 import javax.persistence.*;

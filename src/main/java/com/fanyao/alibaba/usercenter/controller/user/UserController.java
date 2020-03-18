@@ -1,6 +1,6 @@
 package com.fanyao.alibaba.usercenter.controller.user;
 
-import com.fanyao.alibaba.usercenter.domain.entity.user.User;
+import com.fanyao.alibaba.usercenter.entity.po.User;
 import com.fanyao.alibaba.usercenter.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -28,11 +28,14 @@ public class UserController {
     // q=?id=xxx&wxid=xxx&...
     @GetMapping("/q")
     public User query(User user){
+        log.info("接收GET请求");
         return user;
     }
 
+
     @PostMapping("/post")
-    public User post(@RequestBody User user) {
+    public User post(@RequestBody User user){
+        log.info("接收POST请求");
         return user;
     }
 

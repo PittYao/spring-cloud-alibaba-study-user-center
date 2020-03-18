@@ -1,6 +1,8 @@
 server:
   port: 8041
 
+nacos-server-addr: localhost:8848
+
 spring:
   application:
     name: user-center
@@ -17,10 +19,13 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: ${nacos-server-addr}
         cluster-name: CDC
         metadata:
           version: v1
+
+rocketmq:
+  name-server: 127.0.0.1:9876
 
 ---
 spring:
