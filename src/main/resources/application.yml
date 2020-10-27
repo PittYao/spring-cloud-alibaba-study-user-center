@@ -26,6 +26,9 @@ spring:
         metadata:
           version: v1
 
+rocketmq:
+  name-server: 127.0.0.1:9876
+
 jwt:
   secret: 秘钥
   # 有效期，单位秒，默认2周
