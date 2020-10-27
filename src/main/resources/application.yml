@@ -1,5 +1,5 @@
 server:
-  port: 8042
+  port: 8043
 
 nacos-server-addr: localhost:8848
 
@@ -25,6 +25,13 @@ spring:
         # 元数据
         metadata:
           version: v1
+
+jwt:
+  secret: 秘钥
+  # 有效期，单位秒，默认2周
+  expire-time-in-second: 1209600
+
+
 
 ---
 spring:
