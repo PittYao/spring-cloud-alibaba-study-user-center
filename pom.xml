@@ -17,7 +17,7 @@
     <properties>
         <java.version>1.8</java.version>
         <spring.cloud.version>Hoxton.RELEASE</spring.cloud.version>
-        <spring.cloud.alibaba.version>2.1.0.RELEASE</spring.cloud.alibaba.version>
+        <spring.cloud.alibaba.version>2.2.0.RELEASE</spring.cloud.alibaba.version>
         <skipTests>true</skipTests>
     </properties>
 
@@ -42,7 +42,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 
 
     <dependencies>

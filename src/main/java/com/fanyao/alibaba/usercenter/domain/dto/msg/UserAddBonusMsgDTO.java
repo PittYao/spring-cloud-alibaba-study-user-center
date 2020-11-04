@@ -1,4 +1,4 @@
-package com.fanyao.alibaba.usercenter.entity.dto.msg;
+package com.fanyao.alibaba.usercenter.domain.dto.msg;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

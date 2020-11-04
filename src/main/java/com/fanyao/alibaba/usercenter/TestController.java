@@ -3,7 +3,7 @@ package com.fanyao.alibaba.usercenter;
 import java.util.Date;
 
 import com.fanyao.alibaba.usercenter.dao.user.UserMapper;
-import com.fanyao.alibaba.usercenter.entity.po.User;
+import com.fanyao.alibaba.usercenter.domain.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

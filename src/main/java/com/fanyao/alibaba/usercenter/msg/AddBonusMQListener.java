@@ -2,9 +2,9 @@ package com.fanyao.alibaba.usercenter.msg;
 
 import com.fanyao.alibaba.usercenter.dao.bonus.BonusMapper;
 import com.fanyao.alibaba.usercenter.dao.user.UserMapper;
-import com.fanyao.alibaba.usercenter.entity.dto.msg.UserAddBonusMsgDTO;
-import com.fanyao.alibaba.usercenter.entity.po.Bonus;
-import com.fanyao.alibaba.usercenter.entity.po.User;
+import com.fanyao.alibaba.usercenter.domain.dto.msg.UserAddBonusMsgDTO;
+import com.fanyao.alibaba.usercenter.domain.entity.Bonus;
+import com.fanyao.alibaba.usercenter.domain.entity.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;

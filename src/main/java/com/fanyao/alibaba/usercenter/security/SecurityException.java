@@ -1,4 +1,4 @@
-package com.fanyao.alibaba.usercenter.exception;
+package com.fanyao.alibaba.usercenter.security;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,9 +12,9 @@ import lombok.Builder;
 
 @AllArgsConstructor
 @Builder
-public class CustomSecurityException extends RuntimeException {
+public class SecurityException extends RuntimeException {
 
-    public CustomSecurityException(String message) {
+    public SecurityException(String message) {
         super(message);
     }
 }

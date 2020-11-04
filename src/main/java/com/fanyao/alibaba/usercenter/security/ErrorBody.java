@@ -1,4 +1,4 @@
-package com.fanyao.alibaba.usercenter;
+package com.fanyao.alibaba.usercenter.security;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

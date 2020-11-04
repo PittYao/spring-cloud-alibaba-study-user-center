@@ -1,7 +1,6 @@
 package com.fanyao.alibaba.usercenter.auth;
 
-import com.fanyao.alibaba.usercenter.ErrorBody;
-import com.fanyao.alibaba.usercenter.exception.CustomSecurityException;
+import com.fanyao.alibaba.usercenter.security.ErrorBody;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,16 +16,29 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionErrorHandler {
 
-    @ExceptionHandler(CustomSecurityException.class)
-    public ResponseEntity<ErrorBody> error(CustomSecurityException e) {
-        log.warn("发生CustomSecurityException异常", e);
+    @ExceptionHandler(SecurityException.class)
+    public ResponseEntity<ErrorBody> error(SecurityException e) {
+        log.warn("发生SecurityException异常", e);
 
         return new ResponseEntity<>(
                 ErrorBody.builder()
-                        .body("Token非法,不能访问")
+                        .body(e.getMessage())
                         .status(HttpStatus.UNAUTHORIZED.value())
                         .build(),
                 HttpStatus.UNAUTHORIZED
+        );
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ErrorBody> error(IllegalArgumentException e) {
+        log.warn("发生 IllegalArgumentException 异常", e);
+
+        return new ResponseEntity<>(
+                ErrorBody.builder()
+                        .body(e.getMessage())
+                        .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
+                        .build(),
+                HttpStatus.INTERNAL_SERVER_ERROR
         );
     }
 }

@@ -1,4 +1,4 @@
-package com.fanyao.alibaba.usercenter.domain.dto;
+package com.fanyao.alibaba.usercenter.domain.dto.login;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,20 +7,22 @@ import lombok.NoArgsConstructor;
 
 /**
  * @author: bugProvider
- * @date: 2020/10/27 09:09
- * @description:
+ * @date: 2020/10/27 09:17
+ * @description: 登录DTO
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserRespDTO {
-    private Integer id;
+public class UserLoginDTO {
+    private String code;
+    /**
+     * 头像地址
+     */
     private String avatarUrl;
     /**
-     * 积分
+     * 微信昵称
      */
-    private Integer bonus;
     private String wxNickName;
 
 }

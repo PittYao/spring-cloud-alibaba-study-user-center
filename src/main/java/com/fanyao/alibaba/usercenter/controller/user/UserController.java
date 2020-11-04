@@ -2,12 +2,11 @@ package com.fanyao.alibaba.usercenter.controller.user;
 
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
-import com.fanyao.alibaba.usercenter.auth.CheckLogin;
-import com.fanyao.alibaba.usercenter.domain.dto.JwtTokenRespDTO;
-import com.fanyao.alibaba.usercenter.domain.dto.LoginRespDTO;
-import com.fanyao.alibaba.usercenter.domain.dto.UserLoginDTO;
-import com.fanyao.alibaba.usercenter.domain.dto.UserRespDTO;
-import com.fanyao.alibaba.usercenter.domain.entity.user.User;
+import com.fanyao.alibaba.usercenter.domain.dto.login.JwtTokenRespDTO;
+import com.fanyao.alibaba.usercenter.domain.dto.login.LoginRespDTO;
+import com.fanyao.alibaba.usercenter.domain.dto.login.UserLoginDTO;
+import com.fanyao.alibaba.usercenter.domain.dto.login.UserRespDTO;
+import com.fanyao.alibaba.usercenter.domain.entity.User;
 import com.fanyao.alibaba.usercenter.service.UserService;
 import com.fanyao.alibaba.usercenter.util.JwtOperator;
 import lombok.RequiredArgsConstructor;
@@ -34,7 +33,6 @@ public class UserController {
     private final JwtOperator jwtOperator;
 
     @GetMapping("/{id}")
-    @CheckLogin
     public User findById(@PathVariable Integer id) {
         log.info("接收GET请求");
         return userService.findById(id);
@@ -45,7 +43,7 @@ public class UserController {
         Map<String, Object> userInfo = new HashMap<>(3);
         userInfo.put("id", 22);
         userInfo.put("wxNickName", "测试");
-        userInfo.put("role", "test");
+        userInfo.put("role", "admin");
 
         return jwtOperator.generateToken(userInfo);
     }

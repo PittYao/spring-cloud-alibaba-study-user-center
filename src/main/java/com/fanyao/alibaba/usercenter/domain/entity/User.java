@@ -1,4 +1,4 @@
-package com.fanyao.alibaba.usercenter.entity.po;
+package com.fanyao.alibaba.usercenter.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

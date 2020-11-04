@@ -1,5 +1,5 @@
 server:
-  port: 8043
+  port: 8045
 
 nacos-server-addr: localhost:8848
 
